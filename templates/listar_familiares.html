@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar-Familiares</title>
+</head>
+<body>
+  <h1>Hola desde template de listado de familiares</h1>    
+  {% for familiar in todos_los_familiares %}
+    <p>El nombre es {{familiar.nombre}}</p> 
+    <p>El apellido es {{familiar.apellido}}</p>
+    <p>La edad es {{familiar.edad}}</p>
+    <p>Es mi {{familiar.parentesco}}</p>
+    {% if familiar.vivo == True %}
+        <p>Vive !!!!!</p>
+    {% else %}
+        <p>Fallecido</p>
+    {% endif %}
+    <p>--------------</p>
+  {% endfor %}
+</body>
+</html>
